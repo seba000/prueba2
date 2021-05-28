@@ -11,13 +11,25 @@
 body{
     font-family: 'Open Sans', sans-serif;
 }
-
+#DivAlert{
+    background-color: red;
+    font-size: large;
+    color: white;
+    align-items: center;
+    border-radius: 5px;
+    
+}
+.errorAlert {
+    color: red;
+    background-color: red;
+}
 .contenedor{
     width: 90%;
     max-width: 68%;
     overflow: hidden;
     margin: auto;
     padding: 60px 0;
+    text-align: center;
 }
 
 .header{

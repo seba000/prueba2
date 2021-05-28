@@ -25,31 +25,36 @@
         </div>
         
     </header>
+
+
     <main>
-        <section class="services contenedor" id="servicio"></section>
+        <section class="services contenedor" id="servicio">
             <h2 class="subtitulo">Contactanos y haznos saber tu opinion de la Pagina</h2>
             <div class="contenedor-servicio">
                 <img src="img/contacto.png" alt="">
-                <div class="checklist-servicio">
-                    
-                    
-                    <div class="formulario__grupo-input">
-                        <label for="nombres" class="formulario__label">Nombre y Apellido</label>
-                        <input type="text" class="formulario__input" name="nombres" id="nombres" placeholder="">
-                        <br>
-                        <label for="nombres" class="formulario__label">Correo Electronico</label>
-                        <input type="text" class="formulario__input" name="correo" id="correo" placeholder="">
-                        <br>
-                        <label for="nombres" class="formulario__label">Comentario</label>
-                        <input type="text" class="formulario__inputC" name="comentario" id="comentario" placeholder="">
-                        <br>
-                        <button class="formulario__btn" id="contactobtn">Enviar</button>
-                    </div>
-                    
-                    
-                    
-                    
-                </div>
+                
+                    <div class="checklist-servicio">
+                        <div class="formulario__grupo-input">
+
+                            <form action="#"  id="contactenos">    
+                                <label for="nombre" class="formulario__label" >Nombre y Apellido</label>
+                                <input type="text" class="formulario__input" name="nombre" id="nombre1" placeholder="">
+                                <br>
+                                <label for="correo" class="formulario__label" >Correo Electronico</label>
+                                <input type="email" class="formulario__input" name="correo" id="correo1" placeholder="">
+                                <br>
+                                <label for="comentario" class="formulario__label" >Comentario</label>
+                                <input type="text" class="formulario__inputC" name="comentario" id="comentario1" placeholder="">
+                                <br>
+                                <button class="formulario__btn"  type="submit" >Enviar</button>
+                            </form>
+                            <br>
+                            <div id="DivAlert" style="display: none;">
+                                Error en formulario!!
+                                recuerde completar todos los campos
+                            </div>
+                        </div>
+                    </div> 
             </div>
         </section>
           
@@ -74,7 +79,67 @@
         </div>
         <div class="line"></div>
     </footer>
-    <script src="js/menu.js"></script>  
+
+
+
+    <script src="js/menu.js"></script>
+    <script src="js/jquery-3.6.0.js" type="text/javascript"></script>
+
+    <!--validacion-->
+    <script>
+        var np = new RegExp("^[a-z A-Z]{4,30}$");
+        var mp = new RegExp("^[a-zA-Z0-9._-]+@[a-zA-Z0-9-]+.[a-zA-Z]{2,4}$");
+        function validaTexto(idInput,patron){
+            return $(idInput).val().match(patron) ? true : false;
+        }
+
+        function validaSelect(idSelect){
+            return $(idSelect).val() ? true : false;
+        }
+
+        $(
+            function(){
+                $("#contactenos").submit(
+                    function(e){
+                        var valido = true;
+                        if(!validaTexto("#nombre1",np))
+                        {
+                            valido = false;
+                            $("#nombre1").addClass("errorAlert");
+                        }
+                        if(!validaTexto("#correo1",mp))
+                        {
+                            valido = false;
+                            $("#correo1").addClass("errorAlert");
+                        }
+                        if(!validaSelect("#comentario1")){
+                            valido = false;
+                            $("#comentario1").addClass("errorAlert");
+                        }
+                        if(!valido){
+                            $("#DivAlert").show();
+                            e.preventDefault();
+                        }
+                        else
+                        {
+                            alert("ENVIADO CORRECTAMENTE!");
+                        }
+                        
+                    }
+                );
+                $("#nombre1").focusin(
+                    function()
+                    {
+                        $("#DivAlert").hide();
+                        $("#nombre1").removeClass("errorAlert");
+                        $("#correo1").removeClass("errorAlert");
+                        $("#comentario1").removeClass("errorAlert");
+                    }
+                );
+
+            }
+        );
+    </script>  
     
 </body>
 </html>

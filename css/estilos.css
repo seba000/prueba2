@@ -424,7 +424,8 @@ footer {
     border-color: #1FDE82;
 }
 
-/* Breakpoints responsive */
+
+/* area responsivaa */
 
 @media screen and (max-width:800px) {
     .titulo {
