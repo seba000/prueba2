@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Animación</title>
+    <title>Página web</title>
     <link rel="stylesheet" href="estilos.css">
+    <link rel="shortcut icon" href="img/logo pagina web-01.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
 </head>
@@ -13,49 +14,80 @@
     <header class="header" id="inicio">
         <img class="hamburguer" src="img/hamburguesa.svg" alt="">
         <nav class="menu-navegacion">
-                <a href="#inicio">Inicio</a>
-                <a href="#servicio">Servcio</a>
-                <a href="#galeria">Portafolio</a>
-                <a href="#expertos">Servicios</a>
+                
+                <a href="Registro.html">Iniciar Sesion</a>
+                <a href="#servicio">Moneda</a>
+                <a href="#PC">PC</a>
+                <a href="#Ps4">PS4</a>
+                <a href="#Xbox">XBOX</a>
+                <a href="contacto.html">Contactanos</a>
                 <a href="#footer">Contacto</a>
         </nav>
         <div class="contenedor head">
-            <h1 class="titulo">Convertimos tus ideas en una realidad</h1>
-            <p class="copy">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+            <h1 class="titulo">TUS JUEGOS FAVORITOS A LOS MEJORES PRECIOS</h1>
+            <p class="copy">Obtiene las keys de los juegos que quieres para la plataforma que prefieras</p>
         </div>
         
     </header>
     <main>
-        <section class="services contenedor" id="servicio">
-            <h2 class="subtitulo">Nuestro servicio</h2>
+        <section class="services contenedor" id="servicio"></section>
+            <h2 class="subtitulo">Conoce el precio de cada moneda</h2>
             <div class="contenedor-servicio">
-                <img src="img/checklist.svg" alt="">
+                <img src="img/moneda.png" alt="">
                 <div class="checklist-servicio">
-                    <div class="service">
-                        <h3 class="n-service"><span class="number">1</span>Diseño web</h3>
-                        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab autem enim illum dolorum nisi. Aspernatur.</p>
-                    </div>
-                    <div class="service">
-                        <h3 class="n-service"><span class="number">2</span>Diseño web</h3>
-                        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab autem enim illum dolorum nisi. Aspernatur.</p>
-                    </div>
-                    <div class="service">
-                        <h3 class="n-service"><span class="number">3</span>Diseño web</h3>
-                        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab autem enim illum dolorum nisi. Aspernatur.</p>
-                    </div>
+                    
+                    <h2>ve la fecha y valor</h2>
+                    <br>
+                    <h2><ul id="resultado"></ul></h2>
+                    
+                    
+                    <button class="formulario__btn1" id="dolar">DOLAR</button>
+                    <button class="formulario__btn2" id="euro">EURO</button>
+                    <button class="formulario__btn3" id="bitcoin">BITCOIN</button>
+                    
                 </div>
             </div>
         </section>
-        <section class="gallery" id="galeria">
+                </div>
+            </div>
+        </section>
+        <section class="gallery" id="PC">
             <div class="contenedor">
-                <h2 class="subtitulo">Galeria</h2>
+                <h2 class="subtitulo">PC</h2>
                 <div class="contenedor-galeria">
-                    <img src="img/uno.jpg" class="img-galeria" alt="Hola">
-                    <img src="img/dos.jpg" class="img-galeria" alt="">
-                    <img src="img/tres.jpg" class="img-galeria" alt="">
-                    <img src="img/cuatro.jpg" class="img-galeria" alt="">
-                    <img src="img/cinco.jpg" class="img-galeria" alt="">
-                    <img src="img/seis.jpg" class="img-galeria" alt="">
+                    <img src="img/rdr.png" class="img-galeria" alt="Hola">
+                    <img src="img/Sea.png" class="img-galeria" alt="">
+                    <img src="img/daysgone.png" class="img-galeria" alt="">
+                    <img src="img/Dyinglpng.png" class="img-galeria" alt="">
+                    <img src="img/Minecraft.png" class="img-galeria" alt="">
+                    <img src="img/residentevil.png" class="img-galeria" alt="">
+                </div>
+            </div>
+        </section>
+        <section class="gallery" id="Ps4">
+            <div class="contenedor">
+                <h2 class="subtitulo2">PS4</h2>
+                <div class="contenedor-galeria">
+                    <img src="img/mk11.png" class="img-galeria" alt="Hola">
+                    <img src="img/btf.png" class="img-galeria" alt="">
+                    <img src="img/dk.png" class="img-galeria" alt="">
+                    <img src="img/gta.png" class="img-galeria" alt="">
+                    <img src="img/rdr.png" class="img-galeria" alt="">
+                    <img src="img/residentevil.png" class="img-galeria" alt="">
+                    
+                </div>
+            </div>
+        </section>
+        <section class="gallery" id="Xbox">
+            <div class="contenedor">
+                <h2 class="subtitulo3">XBOX</h2>
+                <div class="contenedor-galeria">
+                    <img src="img/Sea.png" class="img-galeria" alt="Hola">
+                    <img src="img/gta.png" class="img-galeria" alt="">
+                    <img src="img/dk.png" class="img-galeria" alt="">
+                    <img src="img/Dyinglpng.png" class="img-galeria" alt="">
+                    <img src="img/dbyd.png" class="img-galeria" alt="">
+                    <img src="img/mk11.png" class="img-galeria" alt="">
                 </div>
             </div>
         </section>
@@ -64,32 +96,21 @@
             <img src="" alt="" class="agregar-imagen">
         </div>
         <section class="contenedor" id="expertos">
-            <h2 class="subtitulo">Expertos en:</h2>
-            <section class="experts">
-                <div class="cont-expert">
-                    <img src="img/pie_chart.svg" alt="">
-                    <h3 class="n-expert">Analytics</h3>
-                </div>
-                <div class="cont-expert">
-                    <img src="img/search_engine.svg" alt="">
-                    <h3 class="n-expert">SEO</h3>
-                </div>
-                <div class="cont-expert">
-                    <img src="img/security.svg" alt="">
-                    <h3 class="n-expert">Security</h3>
-                </div>
-            </section>
+            <h2 class="subtitulo">Nuestra Ubicacion:</h2>
+            
+            <button class="formulario__btn" onclick="findMe()">Mostrar ubicación</button>
+            <div id="map"></div>
         </section>
     </main>
 
     <footer id="footer">
         <div class="contenedor footer-content">
                 <div class="contact-us">
-                    <h2 class="brand">AlexCG Design</h2>
-                    <p>Somos expertos en la creación de tus sueños</p>
+                    <h2 class="brand">DuocGamer</h2>
+                    <p>La mejor tienda de juegos en Chile</p>
                 </div>
                 <div class="social-media">
-                    <a href="./" class="social-media-icon">
+                    <a href="*#footer" class="social-media-icon">
                         <i class='bx bxl-facebook'></i>
                     </a>
                     <a href="./" class="social-media-icon">
@@ -102,7 +123,11 @@
         </div>
         <div class="line"></div>
     </footer>
-    <script src="js/menu.js"></script>
+    <script src="js/menu.js"></script>  
     <script src="js/lightbox.js"></script>
+    <script src="js/monedas.js"></script>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTs23QQ1rCNxHGp_sotCtD5DnEL1Fzsb8"></script>
+    <script src="js/maps.js"></script>
 </body>
 </html>
